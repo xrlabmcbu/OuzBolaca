@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAA</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #cbcbcb; /* Koyu mavi arka plan rengi */
+        }
+        img {
+            max-width: 100%; /* Resmi sayfanın genişliğine göre ölçeklendir */
+            height: auto; /* Yüksekliği otomatik ayarla */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Yapay Zeka Otomasyon Ajansları</h1>
+        <br>
+        <h3>1) AI Automation Agency Nedir?</h3>
+        <p>AI automation ajansları, işletmeler ve bireyler için otomasyon çözümleri sunan ajanslardır. Bu ajanslar, yapay zeka (AI) teknolojilerini kullanarak rutin ve zaman alıcı işleri otomatikleştirir, iş süreçlerini optimize eder ve verimliliği artırır.</p>
+        <p>İş süreçlerinin otomasyonuna örnek olarak müşteri hizmetleri botları, veri girişi otomasyonu ve e-posta yanıtlama otomasyonu gibi çözümler verilebilir. Bunun yanı sıra, veri analizi ve raporlaması, veri tahmini yapma gibi konularda da hizmet sunarlar.</p>
+        <p>Beni bu konuda araştırma yapmaya iten şey aslında bu otomasyon süreçlerini yaparken kullandıkları teknolojiler ve araçlar oldu. Çünkü bu ajanslar sıfırdan yapay zeka yazmak yerine, hali hazırda olan sistemleri kullanıyorlar. Örneğin, ChatGPT API gibi önceden eğitilmiş yapay zeka modellerini entegre ederek müşterilere özelleştirilmiş çözümler sunuyorlar.</p>
+        <p>Sadece bu da değil, Voiceflow, Make.com ve benzeri araçlar sayesinde low-code ve no-code teknikleri kullanılarak hızlı ve verimli çözümler üretilebiliyor. Voiceflow, sesli asistanlar ve chatbotlar için; Make.com ise veri entegrasyonu ve iş akışı otomasyonu için kullanılmaktadır.</p>
+        <p>Benim de bu araştırma boyunca yoğunlaştığım iki program Voiceflow ve Make.com idi. Bu sistemleri kurcalayarak birkaç basit/orta projeler yapmaya çalıştım ve mantığını anlamaya çalıştım.</p>
+
+        
+        <h3>2) Make.com'da yaptığım iki ufak proje</h3><br>
+        <img src="telegrambot.png" alt="Data Yüklenmesi">
+        <br><br>
+  
+        <h5>A) Modüle RSS eklentisini ekledim.</h5>
+        <p>RSS yeni eklenen içeriğin takip edilmesinde yardımcı olan bir araçtır. <br>URL olarak bir haber sitesinin rss uzantılı linki verdim ki güncel haberler gelebilsin</p>
+        <img src="telegrambot3.png" alt="Data Yüklenmesi">
+        <br><br>
+        
+        
+        <h5>B) Telegram botu aracını ekledim ve bunu RSS ile birleştirdim </h5>
+        <p>Bu botu telegramın kendi botu BotFather üzerinden kendiniz oluşturmanız gerekiyor</p>
+        <p>Oluşturduktan sonra token bilgisini Connection kısmına girdikten sonra bağlantı sağlanmış oluyor</p>
+        <p>Sonra mesajların atalacağı kanalın id'sini ve text bilgilerini girdikten sonra her şey hazır olmuş oluyor </p>
+        <img src="telegrambot4.png" alt="Telegram Bot" style="height: 600px; width: 900px;">
+        <br><br>
+
+        <h5>C) Start tuşuna basınca çalışmaya hazır </h5>
+        <p>Make.com anasayfasında zaman aralığı ayarlanabilir ve istediğiniz bir saat aralığı ayarlanabilir</p>
+        <img src="telegrambot2.png" alt="Telegram Bot" style="height: 600px; width: 900px;">
+        <br><br>
+
+        <h5>EXTRA) Belirli bir süre aralığında fotoğraf atan bot</h5>
+        <p>Make.com anasayfasında zaman aralığı ayarlanabilir ve istediğiniz bir saat aralığı ayarlanabilir</p>
+        <img src="fotobot2.png" alt="Telegram Bot" style="height: 600px; width: 900px;">
+        <img src="fotobot.png" alt="Telegram Bot" style="height: 600px; width: 900px;">
+        <br><br>
+
+        <h3>3) VoiceFlow üzerinden yaptığım projeler</h3><br>
+        <img src="voice.png" alt="Data Yüklenmesi">
+        <br><br>
+
+        <h5>3-A) Proje Amacı</h5>
+        <p>Kullanıcı Chatbot'a aradığı ürünün özelliklerini yazacak ve chatbot bu yazdığı ürünü airtable database'inde bulucak ve kullanıcıya getirecek</p>
+
+        <h6>1) İlk Blok: Greetings</h6>
+        <p>Chatbot kullanıcıyı karşılayacak ve kullanıcıdan input girilmesi beklenilicek</p>
+        <p>Burda text ve capture bloklarını kullandım</p>
+        <img src="voice2.png" alt="Data Yüklenmesi">
+        <br><br>
+
+        <h6>2) İkinci Blok: Formül</h6>
+        <p>Şimdi sıkıntı şu müşteri istediği ürünü yazacak fakat airtable bunu anlaması için kullanıcının attığı yazının bir airtable sorgusuna çevrilmesi gerekli</p>
+        <p>Burda Set AI bloğunu kullandım kullandım</p>
+        <img src="voice3.png" alt="Data Yüklenmesi"><br><br>
+        <p>Prompt kısmında yapay zekaya ne yapması gerektiğini yazmanız gerekir.
+        <br>Alttaki System kısmında da yapay zekaya ne olduğunu anlatmanız gerekir.
+        <br>Burada yapay zekaya gelen inputları bir airtable sorgusuna çevirmesi gerektiğini yazdım.
+        <br>Örnek olarak ona bunu verdim:<br> "Customer:  I'm looking for a Acer 16GB ram laptop<br>AI: AND({Company} = 'Acer', {Ram} = '16G')"
+        <br>Bu örnekle kullanıcıdan aldığı metni nasıl bir şekilde çevirmesi gerektiğini öğrettim. Aldığı metni sorguya dönüştürüp Airtable Query adında bir değişkene atıyor.</p>
+        <img src="deneme.png" alt="Data Yüklenmesi">
+        <br><br>
+
+        <h6>3) Üçüncü Blok: Kontrol</h6>
+        <p>Kontrol bloğu Airtable sorgusu değişkeni geçerli mi diye kontrol ediyor</p>
+        <p>Burada Condition bloğu kullandım</p>
+        <img src="Kontrol.png" alt="Data Yüklenmesi">
+        <br><br>
+
+        <h6>4) Dördüncü Blok: Airtable Bağlantısı</h6>
+        <p>Get API bloğunu kullanarak bağlantı kuruyorum</p>
+        <img src="airtablecon.png" alt="Data Yüklenmesi"><br><br>
+        <p>Airtable database'inize ulaşmak için linkini ve token girmeniz gerekir.
+        <p>Link kısmındaki filterByFormula komutunu airtableQuery değişkenine atıyoruz. <br> Bu şekilde kullanıcının istediği ürüne göre bi filtre uyguluyor ve onları getiriyor    
+        <p>Sonrasında getirilen Json dosyasından istediğimiz sütunları seçip hepsini bir değişkene atıyorum. </p>
+        <img src="airtable1.png" alt="Data Yüklenmesi">
+        <img src="airtable2.png" alt="Data Yüklenmesi">
+     
+        <br><br>
+
+        <h6>5) Beşinci Blok: Kontrol 2</h6>
+        <p>Airtable'dan çektiğim şirket ismi değişkenini kontrol ediyorum eğer boş ise hata verip "bizde böyle bir ürün bulunmamaktadır" yazısını yazdırıyorum</p>
+        <img src="company.png" alt="Data Yüklenmesi">
+        <br><br>
+
+        <h6>6) Altıncı Blok: End Of Project</h6>
+        <p>Son blok, bir Carosuel bloğudur.</p>
+        <img src="final.png" alt="Data Yüklenmesi"><br><br>
+        <p>Yazdırmak istediğim özelliklerini değişkenlerini girdim eğer çalıştığım veri setinde<br>
+             ürünün link ya da görseli ile ilgili bir bilgi olsaydı onu da eklerdim fakat olmadığı<br>için eklemedim sadece ürünün bilgileri ve fiyatı çıkıyor</p>
+        <img src="final2.png" alt="Data Yüklenmesi"><br><br>
+        
+        <h6>7) Final: Output</h6>
+        <p>Eğer kullanıcının istediği ürün airtable'da varsa ürünü bilgilerini ve fiyatını getiriyor</p>
+        <img src="final3.png" alt="Data Yüklenmesi">
+        <br><br>
+            
+        <h5>3-B) İkinci Proje</h5>
+        <p>Yukarda yaptığım projenin aynısı bir Amazon Satış veri setinde denedim. Yapı olarak ikisi de aynı, farklı olan şeyler formül içindeki promptlar. İsabetli çalışan bir ürün elde edemedim fakat düzgün çalıştığı zamanlarda ekrana sadece ürün bilgilerini getirmekle kalmıyor ürünün fotoğrafını ve ürüne gidebilceğiniz bir linkte mevcut. </p>
+        <img src="smart.png" alt="Data Yüklenmesi">
+        <br>
+        <br>
+        <br>
+
+        
+        
+    </div>
+</body>
+</html>
